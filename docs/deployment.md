@@ -165,7 +165,7 @@ sudo apt-get install -y nodejs
 sudo npm install -g pnpm pm2
 
 # 2. Clone the repository
-git clone https://github.com/your-org/tpt-hearth.git
+git clone https://github.com/PhillipC05/tpt-hearth.git
 cd tpt-hearth
 
 # 3. Install and build

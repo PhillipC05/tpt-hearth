@@ -2,7 +2,7 @@
 
 **A calm web/PWA social platform for presence, conversation, and human bonds.**
 
-Built by [TPT Solutions](https://github.com/tpt-solutions).
+Built by [PhillipC05](https://github.com/PhillipC05).
 
 `tpt hearth` is not optimized for growth, productivity, virality, or attention capture. It is a digital lodge: a place to sit, speak gently, and be together without performance pressure.
 
@@ -54,7 +54,7 @@ Built by [TPT Solutions](https://github.com/tpt-solutions).
 ## Quick start
 
 ```sh
-git clone https://github.com/tpt-solutions/tpt-hearth.git
+git clone https://github.com/PhillipC05/tpt-hearth.git
 cd tpt-hearth
 pnpm install
 cp .env.example .env
