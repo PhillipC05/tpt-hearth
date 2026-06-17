@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --ember: #D46A2E;
+  --ember-rgb: 212, 106, 46;
+  --ash: #2C2C2E;
+  --ash-rgb: 44, 44, 46;
+  --sand: #E8DCC4;
+  --sand-rgb: 232, 220, 196;
+  --pine: #1A2F1A;
+  --pine-rgb: 26, 47, 26;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.075);
+  --border: rgba(232, 220, 196, 0.14);
+  --muted: rgba(232, 220, 196, 0.68);
+  --subtle: rgba(232, 220, 196, 0.48);
+  --shadow-ember: 0 0 40px rgba(212, 106, 46, 0.18);
+  --body-color: var(--sand);
+  --body-bg: linear-gradient(135deg, #2C2C2E 0%, #242428 48%, #1A2F1A 100%);
+  --body-bg-solid: var(--ash);
+  --heading-color: var(--sand);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --surface: rgba(212, 106, 46, 0.06);
+  --surface-strong: rgba(212, 106, 46, 0.10);
+  --border: rgba(44, 44, 46, 0.13);
+  --muted: rgba(44, 44, 46, 0.70);
+  --subtle: rgba(44, 44, 46, 0.50);
+  --shadow-ember: 0 0 40px rgba(212, 106, 46, 0.14);
+  --body-color: #3A3230;
+  --body-bg: linear-gradient(135deg, #F5EDD8 0%, #EDE3CC 48%, #E4DFC8 100%);
+  --body-bg-solid: #F5EDD8;
+  --heading-color: #2C2C2E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--body-bg-solid);
+  transition: background 400ms ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--body-color);
+  background:
+    radial-gradient(circle at 12% -8%, rgba(var(--ember-rgb), 0.22), transparent 30rem),
+    radial-gradient(circle at 88% 8%, rgba(var(--pine-rgb), 0.55), transparent 28rem),
+    var(--body-bg);
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: color 300ms ease, background 400ms ease;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(212, 106, 46, 0.08), transparent 18rem),
+    radial-gradient(circle at 80% 60%, rgba(26, 47, 26, 0.32), transparent 24rem);
+  filter: blur(0.2px);
+}
+
+::selection {
+  color: var(--ash);
+  background: rgba(212, 106, 46, 0.42);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(212, 106, 46, 0.85);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--font-eb-garamond), EB Garamond, serif;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+@layer components {
+  .lodge-surface {
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+    box-shadow: var(--shadow-ember);
+    backdrop-filter: blur(18px);
+  }
+
+  .lodge-panel {
+    border: 1px solid rgba(232, 220, 196, 0.12);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .ember-orb {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(212, 106, 46, 0.34), rgba(212, 106, 46, 0.08) 44%, transparent 70%);
+    filter: blur(22px);
+    animation: ember-glow 5.5s ease-in-out infinite;
+  }
+
+  .page-enter {
+    animation: slow-fade-in 700ms ease-out both;
+  }
+
+  .calm-stack {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .section-stack {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .soft-ember {
+    border-color: rgba(212, 106, 46, 0.28);
+    box-shadow: var(--shadow-ember);
+  }
+}

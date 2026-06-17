@@ -1,0 +1,173 @@
+# `tpt hearth` | Product & Design Document
+**Version:** 1.0 | **Status:** Foundational Blueprint
+**Core Premise:** A digital third place for a post-work, post-scarcity era. No productivity. No metrics. No algorithms. Just presence, conversation, and human bonds.
+
+---
+
+## 1. Vision & Philosophy
+`tpt hearth` is not a social network. It is a **digital campfire**.
+
+The internet was built to optimize attention, extract value, and accelerate productivity. `tpt hearth` is built to do the opposite: slow time down, remove performance anxiety, and give people a quiet, beautiful space to simply exist together.
+
+**Core Beliefs:**
+- Human worth is not tied to output.
+- Connection thrives in intimacy, not scale.
+- Presence is more valuable than content.
+- Technology should serve human rhythms, not hijack them.
+
+**Mantra:** *Come sit. Stay awhile. Just be.*
+
+---
+
+## 2. What `tpt hearth` Explicitly Rejects
+To stay true to the vision, these patterns are permanently excluded:
+- ❌ Algorithmic feeds or recommendation engines
+- ❌ Follower counts, likes, shares, or virality metrics
+- ❌ Infinite scrolling or engagement-optimized UI
+- ❌ Ads, tracking, behavioral data collection, or VC growth mandates
+- ❌ Productivity tools, calendars, or task management
+- ❌ Public broadcasting or influencer culture
+
+---
+
+## 3. Core Architecture & Feature Set
+
+### 🔥 The Hearth (Primary Space)
+- **Rooms:** Intimate, persistent spaces capped at 8–12 active participants.
+- **Formation:** Rooms are created organically. Users can start one, be invited, or wander in. When activity naturally fades for 72 hours, the room gently dims and archives itself.
+- **Interaction:** Primarily text-based conversation, with optional voice presence. No character limits. No reply threading fractals. Conversations flow linearly, like a real table discussion.
+
+### 🪑 The Porch (Low-Friction Entry)
+- A quiet, ephemeral matching space for meeting new people.
+- Users press `"Sit for a while"` and are placed with 2–4 others for a 20-minute window.
+- Soft exit paths: `"Stay longer"` to keep talking, `"Exchange embers"` to save a room link, or `"Step away"` with zero friction.
+- Designed to prevent dating-app anxiety or random-chat toxicity through gentle pacing and mutual consent cues.
+
+### 🌫 Embers (Ambient Co-Presence)
+- Spaces where people share *atmosphere*, not conversation.
+- Examples: A shared audio loop of rain in Wellington, a slow-moving virtual fireplace, a synchronized reading hour, or a quiet music channel.
+- Users can join, sit silently, type occasionally, or leave. No expectation to perform.
+
+### 📜 Letters & Chronicles
+- Asynchronous, thoughtful communication. Written like journal entries or long-form notes.
+- Sent to individuals or shared rooms. Delivered at a natural pace (e.g., "morning" or "evening" delivery windows if users opt in).
+- **Chronicles:** Private, personal archives of rooms you've inhabited and letters you've kept. No public visibility. Just a quiet library of your time spent with others.
+
+### 🕯 Rituals (Optional Gatherings)
+- User-hosted, low-pressure events: storytelling circles, philosophy salons, shared walks (via location-audio sharing), poetry readings, or quiet game nights.
+- Scheduled with calendar-like clarity but zero obligation. Missed rituals leave a gentle summary for those who couldn't attend.
+
+---
+
+## 4. User Experience & Interface Design
+
+### Navigation Metaphor: A Physical Lodge
+Instead of tabs and feeds, the UI uses spatial metaphors:
+- **Hearth** → Active rooms you belong to
+- **Porch** → Meet new people
+- **Embers** → Ambient spaces
+- **Chronicles** → Your personal archive
+- **Grove** → Directory of open rooms (searchable by mood/topic, not algorithm)
+
+### Visual Language
+- **Default Mode:** Warm dark theme (like sitting by fire at night)
+- **Colors:** Ember Orange `#D46A2E`, Ash Gray `#2C2C2E`, Warm Sand `#E8DCC4`, Deep Pine `#1A2F1A`
+- **Typography:** `EB Garamond` or `Source Serif 4` for headers/conversation. `Inter` (softened weight) for UI elements.
+- **Animations:** Slow fades, gentle ember glows, natural easing curves. No sudden movements, no flashing elements.
+- **Notifications:** Disabled by default. Opt-in only. Batched gently. No red badges. Sounds are acoustic, soft, and infrequent.
+
+### Interaction Philosophy
+- **Friction for depth:** Posting a letter or starting a room requires a moment of intention.
+- **Speed for comfort:** Joining, leaving, or switching rooms is instantaneous.
+- **Presence indicators:** Subtle. A warm glow around an avatar when someone is actively typing or speaking. No `"is online"` pressure.
+- **Do Not Disturb:** Default state. You control when you're available.
+
+---
+
+## 5. Technical Architecture (High-Level)
+
+### Core Stack
+- **Frontend:** React/Next.js (Web), Swift/Kotlin (Mobile), Rust/WASM for lightweight desktop
+- **Real-time:** WebRTC for voice/video, WebSockets for text sync
+- **Database:** PostgreSQL (relational, structured for rooms/messages), Redis for ephemeral state
+- **Storage:** S3-compatible (archived letters, ambient audio loops)
+- **Encryption:** End-to-end for private rooms, TLS for transit. Zero-knowledge architecture for personal chronicles.
+
+### Data Philosophy
+- **Data Minimization:** Store only what's needed for continuity. No behavioral tracking, no analytics pixels, no engagement metrics.
+- **User Sovereignty:** Export all data in open formats (JSON, Markdown, MP3). Delete instantly on request.
+- **Open Protocol (Future):** Federation-ready design (ActivityPub or custom lightweight protocol) so communities can self-host hearths without relying on a central server.
+
+### Infrastructure
+- Initially centralized for stability, but architected for eventual decentralization.
+- Server costs covered via cooperative funding, grants, or "pay-what-you-can" commons model. No ads. No venture extraction.
+
+---
+
+## 6. Community & Governance
+
+### Room Stewardship
+- Each room has a rotating `"Steward"` (not an admin). Chosen by consensus or volunteer rotation.
+- Stewards maintain tone, gently guide conversations, and can archive inactive rooms.
+
+### Community Agreements
+- Co-created by early members. Living document.
+- Focus on psychological safety, respectful disagreement, and consent-based interaction.
+- Dispute resolution through dialogue circles. Bans are last-resort, transparent, and appealable.
+
+### Moderation
+- Human-first, AI-assisted only for extreme harm (illegal content, threats).
+- No algorithmic shadowbanning. No engagement-based amplification.
+- Transparency logs for any moderation actions taken.
+
+---
+
+## 7. Sustainability & Commons Model
+
+`tpt hearth` will never sell attention, data, or hope. Infrastructure must be sustained, but not monetized through extraction.
+
+**Phase 1 (Years 1–2):** Grant-funded, cooperative donations, open-source development.
+**Phase 2 (Years 3–4):** User-funded commons. Voluntary contributions, community hosting cooperatives, local pod sponsorships.
+**Phase 3 (Long-term):** Fully decentralized. Communities run their own hearth servers. Interoperable via open protocol. Infrastructure treated as a public good, like libraries or parks.
+
+---
+
+## 8. Phased Roadmap
+
+| Phase | Focus | Deliverables |
+|-------|-------|--------------|
+| **0. Seed** | Philosophy & Prototype | Design system, landing page, waitlist, community covenant |
+| **1. Ember** | MVP (Web) | 50-room limit, text chat, Embers, Porch, invite-only |
+| **2. Flame** | Mobile & Depth | iOS/Android apps, voice presence, Letters/Chronicles, Rituals |
+| **3. Grove** | Community Scale | Stewardship tools, open directory, data export, federation prep |
+| **4. Commons** | Decentralization | Self-hosted nodes, protocol spec, cooperative funding model |
+
+---
+
+## 9. Brand & Voice Guidelines
+
+### Logo & Typography
+- **Wordmark:** `tpt hearth` (all lowercase, soft serif)
+- **Mark:** Abstract flame/hearth line drawing. Minimal, warm, scalable.
+- **Usage:** Always centered, generous whitespace. Never paired with aggressive CTAs or growth language.
+
+### Voice & Tone
+- Calm, grounded, poetic but clear.
+- Never corporate, urgent, or promotional.
+- Examples:
+  - ✅ `"The fire's lit. Pull up a chair."`
+  - ✅ `"You've been quiet lately. The porch is open if you'd like company."`
+  - ❌ `"Boost your engagement!"` / `"Don't miss out!"` / `"Join 1M+ users!"`
+
+---
+
+## 10. Success Metrics (Reimagined)
+`tpt hearth` does not measure DAU, retention funnels, or screen time. It measures:
+- **Depth of Presence:** Average time spent in quiet/ambient rooms
+- **Bond Formation:** Repeat room attendance, letter exchanges, ritual participation
+- **Wellbeing Signals:** Self-reported calm, reduced loneliness (optional, anonymized surveys)
+- **Community Health:** Steward rotation rate, conflict resolution success, archive richness
+
+---
+
+`tpt hearth` is not meant to scale to billions. It's meant to scale in depth. If you build it with patience, it will become exactly what the post-work world needs: a place where people remember how to be human, together.

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "ignoreDeprecations": "5.0",
+    "baseUrl": ".",
+    "paths": {
+      "@tpt-hearth/config": ["packages/config/src/index.ts"],
+      "@tpt-hearth/shared": ["packages/shared/src/index.ts"],
+      "@tpt-hearth/db": ["packages/db/src/index.ts"],
+      "@tpt-hearth/crypto": ["packages/crypto/src/index.ts"],
+      "@tpt-hearth/ui": ["packages/ui/src/index.ts"]
+    }
+  }
+}

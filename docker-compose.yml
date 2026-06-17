@@ -1,0 +1,50 @@
+# `tpt hearth` — Optional Docker Compose stack
+#
+# This file provides PostgreSQL and Redis for teams that want to
+# run them locally or as a reference for production infrastructure.
+#
+# SQLite remains the default database. Postgres/Redis are optional
+# and only needed when scaling beyond SQLite's single-writer limits.
+#
+# Usage:
+#   docker compose up -d        # Start Postgres + Redis
+#   docker compose down         # Stop containers
+#   docker compose down -v      # Stop and delete volumes (destroys data)
+#
+# Connect the app:
+#   DATABASE_URL=postgresql://hearth:hearth@localhost:5432/tpt_hearth
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: tpt-hearth-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hearth
+      POSTGRES_PASSWORD: hearth
+      POSTGRES_DB: tpt_hearth
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hearth -d tpt_hearth"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: tpt-hearth-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    name: tpt-hearth-postgres-data

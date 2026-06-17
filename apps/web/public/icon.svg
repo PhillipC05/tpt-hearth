@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">tpt hearth icon</title>
+  <desc id="desc">A warm ember and lodge roof mark for tpt hearth.</desc>
+  <rect width="512" height="512" rx="112" fill="#2C2C2E"/>
+  <path d="M88 268 256 104l168 164v18H88v-18Z" fill="#1A2F1A" opacity="0.95"/>
+  <path d="M136 286h240v116a34 34 0 0 1-34 34H170a34 34 0 0 1-34-34V286Z" fill="#E8DCC4" opacity="0.92"/>
+  <path d="M256 194c-38 38-54 70-44 98 8 23 30 36 53 31 24-5 41-25 38-49-2-20-15-42-47-80Z" fill="#D46A2E"/>
+  <path d="M264 216c-18 20-24 34-18 46 4 9 14 14 25 12 11-2 19-11 17-23-1-9-8-19-24-35Z" fill="#FFF3EC" opacity="0.78"/>
+  <circle cx="256" cy="248" r="118" fill="#D46A2E" opacity="0.12"/>
+</svg>
